@@ -1,7 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
     const currentYear = document.getElementById("year");
     currentYear.textContent = `${new Date().getFullYear()}`
+
+    fetchData();
 });
+
+async function fetchData() {
+    const employeePath = "./employees.json"
+
+    try{
+        const result = await fetch(employeePath);
+
+        if(!result.ok){
+            throw new Error("Data could not be loaded.")
+        }
+
+        const employeeData = await result.json();
+        displayEmployees(employeeData);
+    } catch (error) {
+        console.error("Failed to fetch data.")
+    }
+};
 
 function displayEmployees(departmentData) {
     const main = document.querySelector("main");
