@@ -1,9 +1,11 @@
+import logo from "../../assets/logo.svg";
+
 export default function Header() {
     return (
         <header>
             <nav>
                 <div id="logo">
-                    <img src="logo/logo.svg" alt="Pixell River Logo" height="100px"/>
+                    <img src={logo} alt="Pixell River Logo" height="100px"/>
                 </div>
                 <ul>
                     <li><a href="#">Employee</a></li>
