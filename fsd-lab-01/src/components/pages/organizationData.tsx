@@ -8,14 +8,14 @@ export function OrganizationData({
 }) {
     return(
         <>
-        <header>
+        <main>
             <h1>Organization</h1>
-            <main>
+            <div>
                 <RoleDescriptionDisplay
                     roles={rolesList}
                 />
-            </main>
-        </header>
+            </div>
+        </main>
         </>
     )
 }

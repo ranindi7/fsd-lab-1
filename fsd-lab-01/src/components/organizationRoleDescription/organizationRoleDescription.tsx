@@ -18,6 +18,7 @@ export function RoleDescription(
                 <h3 onClick={onRoleClick}>
                     {role.role}
                 </h3>
+                <p>{role.name}</p>
             </div>
 
             { isExpanded 
