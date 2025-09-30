@@ -2,12 +2,12 @@ import type { Organization } from "../../types/organizationInterface";
 
 export function RoleDescription(
     {
-        organization,
+        role,
         isExpanded,
         onRoleClick,
     } 
     : {
-        organization: Organization,
+        role: Organization,
         isExpanded: boolean,
         onRoleClick: () => void,
     }
@@ -16,12 +16,12 @@ export function RoleDescription(
         <div className="roleDescription">
             <div>
                 <h3 onClick={onRoleClick}>
-                    {organization.role}
+                    {role.role}
                 </h3>
             </div>
 
             { isExpanded 
-                ? <p>{organization.roleDescription}</p>
+                ? <p>{role.roleDescription}</p>
                 : null
             }
         </div>
